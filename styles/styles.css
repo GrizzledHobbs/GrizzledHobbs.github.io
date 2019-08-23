@@ -1,0 +1,55 @@
+html {
+  font-size: 15px;
+ /* px means "pixels": the base font size is now 15 pixels high  */
+  font-family: 'Roboto Condensed', sans-serif;
+ /* this indicates the type of font your web page */
+  background-color: rgb(128, 0, 255);
+}
+
+#main-header {
+   /* select a specified element is by using the ID selector ( # ) each ID should be *unique* */
+  margin: 0;
+  padding: 20px 0;
+  font-size: 35px;
+  text-align: center;
+  color: rgb(128, 255, 0);
+  text-shadow: 3px, 3px, 1px black;
+ /* sets a drop shadow on text inside the element: horizontal, vetical, blur radius, base color of the shadow */
+}
+
+h2 {
+  font-size: 25px;
+  text-align: inherit;
+ /* aligns text to center of the page */
+}
+
+p, li {
+  font-size: 15px;
+  line-height: #;
+ /* sets distance between lines of text */
+  letter-spacing: normal;
+ /* changes letter spacing */
+}
+
+p {
+  color: rgb(255, 0, 0);
+ /* change the colour of the element selected */
+}
+
+body {
+  width: 1100px;
+ /* specifies width of the element */
+  margin: 0 auto;
+ /* space around the outside of the element: 1st value effects top/bottom, 2nd value effects left/right */
+  background-color: rgb(0, 255, 255);
+  /* to change the background of an element */
+  padding: 0 20px 20px 20px;
+ /* area just around the content: top, right, bottom, left in that order */
+  border: 5px solid black;
+ /* solid line just outside the padding */
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
