@@ -1,20 +1,17 @@
 // this is a comment in javascript
-
 // Image switcher code: this changes the mozilla logo between the two images selected
-
 var myImage = document.querySelector('img');
 
 myImage.onclick = function() {
   var mySrc = myImage.getAttribute('src');
-  if(mySrc === 'images/#') {
-    myImage.setAttribute ('src','images/#');
+  if(mySrc === 'images/reaperpie.jpg') {
+    myImage.setAttribute ('src','images/deathpizza.jpg');
   } else {
-    myImage.setAttribute ('src','images/#');
+    myImage.setAttribute ('src','images/reaperpie.jpg');
   }
 }
 
 /* Personalized welcome message code: this changes the h1 element to a custom messeage (mozilla is cool, your name).. stores your name via the input from the button.. */
-
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
 

@@ -1,20 +1,116 @@
+/* this is a comment in css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 15px;
  /* px means "pixels": the base font size is now 15 pixels high  */
   font-family: 'Roboto Condensed', sans-serif;
  /* this indicates the type of font your web page */
-  background-color: rgb(128, 0, 255);
+  background-color: #2C3531;
+}
+
+body {
+  width: 70%;
+  margin: 0 auto;
 }
 
 #main-header {
    /* select a specified element is by using the ID selector ( # ) each ID should be *unique* */
   margin: 0;
   padding: 20px 0;
-  font-size: 35px;
+  font-size: 40px;
   text-align: center;
-  color: rgb(128, 255, 0);
-  text-shadow: 3px, 3px, 1px black;
+  color: #000000;
+  text-shadow: 5px, 5px, 10px black;
  /* sets a drop shadow on text inside the element: horizontal, vetical, blur radius, base color of the shadow */
+}
+/* || header layout */
+
+nav, article, aside, footer {
+  background-color: #116466;
+  padding: 1%;
+}
+
+nav {
+  height: 50px;
+  background-color: #D9B08C;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 2em;
+}
+
+input {
+  font-size: 1.6rem;
+  height: 32px;
+}
+
+input[type="search"] {
+  flex: 3;
+}
+
+input[type="submit"] {
+  flex: 1;
+  margin-left: 1rem;
+  background: #333;
+  border: 0;
+  color: white;
+}
+
+/* || main layout */
+
+main {
+  display: flex;
+}
+
+article {
+  flex: 4;
+}
+
+aside {
+  flex: 1;
+  margin-left: 10px;
+  background-color: #ffCB9A;
+}
+
+aside li {
+  padding-bottom: 10px;
+}
+
+footer {
+  margin-top: 10px;
+  text-align: center;
 }
 
 h2 {
@@ -25,23 +121,23 @@ h2 {
 
 p, li {
   font-size: 15px;
-  line-height: #;
+  line-height: normal;
  /* sets distance between lines of text */
   letter-spacing: normal;
  /* changes letter spacing */
 }
 
 p {
-  color: rgb(255, 0, 0);
+  color: #D1E3E2;
  /* change the colour of the element selected */
 }
 
 body {
-  width: 1100px;
+  width: 70%;
  /* specifies width of the element */
   margin: 0 auto;
  /* space around the outside of the element: 1st value effects top/bottom, 2nd value effects left/right */
-  background-color: rgb(0, 255, 255);
+  background-color: #D1E3E2;
   /* to change the background of an element */
   padding: 0 20px 20px 20px;
  /* area just around the content: top, right, bottom, left in that order */
@@ -53,3 +149,14 @@ img {
   display: block;
   margin: 0 auto;
 }
+
+/* this changes the color of links within a page
+ a {
+  color: #3800ff;
+}
+a:visited {
+  color: #ff00f7;
+}
+a:hover, a:active, a:focus {
+  color:#E0E017;
+} */

@@ -1,13 +1,14 @@
-<!-- this is a comment.. add notes.. or makes code inactive -->
-<!-- sources: w3schools, mozilla dev network, freecodecamp -->
-
+<!-- this is a comment in html -->
 
 <!DOCTYPE html>
+<html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <title>Title</title>
+
+  <title>My page title</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
   <!-- above links an external css stylesheet -->
   <style media="screen">
@@ -16,45 +17,101 @@
 </head>
 
 <body>
-  <h1 id="main-header">My main header</h1>
-  <p> <img src="https://images.pexels.com/photos/1938123/pexels-photo-1938123.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="this inserts an image" width="500">
-    <!-- width="x" changes width of the photo -->
-  </p>
-  <h2>My top level heading</h2>
-  <p>Below is an <strong>Ordered list</strong>, they are usually numbered</p>
-  <ol>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-  </ol>
-  <h3>My subheading</h3>
-  <p>Below is an <em>Unordered list</em>, they are great for listing information</p>
-  <ul>
-    <li>A</li>
-    <li>B</li>
-    <li>C</li>
-  </ul>
-  <h4>My sub-subheading</h4>
-  <p>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">This imbeds a link</a>
-    <!-- target="_blank" opens link in new tab -->
-  </p>
-  <h6>Smallest Header</h6>
-  <p>This is a Paragraph</p>
+  <!-- Here is our main header that is used across website -->
 
-  <p>
-    <a href="https://www.w3schools.com/html/" title="supplemental info about link" target="_blank">w3schools html</a>
-  </p>
-  <p>
-    <a href="https://www.freecodecamp.org/" target="_blank"> <img src="https://images.pexels.com/photos/2067048/pexels-photo-2067048.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="photo" width="100"> </a>
-    <!--turns an image into a clickable link-->
-  </p>
+  <header>
+    <h1 id="main-header">My main header</h1>
+  </header>
 
-  <button> Change user</button>
-  <!-- this creates a button with the text change user -->
+  <!-- below creates a nav bar with clickable links to differnet pages -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- A Search form is another commmon way to navigate through websites -->
+    <form>
+      <input type="search" name="#" placeholder="Search query">
+      <input type="submit" value="Go!">
+    </form>
+  </nav>
+
+  <!-- Here is our page's main content -->
+  <main>
+
+    <!-- It contains an article -->
+    <article>
+      <h2>My top level heading</h2>
+      <p>Below is an <strong>Ordered list</strong>, they are <u>usually numbered</u></p>
+      <!-- strong places strong emphasis/importance  -->
+      <!-- 'u' used to convey a meaning traditionally conveyed by underline: Proper name, misspelling, links -->
+      <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ol>
+
+      <h3>My subheading</h3>
+      <p>Below is an <em>Unordered list</em>, they are great for <b>listing information</b></p>
+      <!-- emphasis shows stress on certain words -->
+      <!-- 'b' is used to convey a meaning traditionally conveyed by bold: Key words, product names, lead sentence -->
+
+      <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+      </ul>
+
+      <h4>My sub-subheading</h4>
+
+      <p>This is how we mark up a <i>Paragraph</i></p>
+      <!-- 'i' used to convey a meaning traditionally conveyed by italic: Foreign words, taxonomic designation, technical terms, a thought -->
+      <a href="mailto:example@gmail.com">Send an email to example</a>
+      <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozilla Developer Network</a>
+        <!-- this imbeds a link within an element -->
+        <!-- target="_blank" opens link in new tab -->
+      </p>
+      <p>
+        <a href="https://www.w3schools.com/html/" title="supplemental info about link" target="_blank">w3schools <abbr title="Hypertext Markup Language">HTML</abbr></a>
+        <!-- abbr abbreviates words that are wrapped within it -->
+      </p>
+
+    </article>
+
+    <!-- the aside content can also be nested within the main content -->
+    <aside>
+      <h2>Related</h2>
+
+      <ul>
+        <li><a href="#">This is the side bar</a></li>
+        <li><a href="#">usually used for quotes</a></li>
+        <li><a href="#">or media, sometimes impotant links</a></li>
+        <li><a href="#">it can be nested within the "main" element</a></li>
+        <li><a href="#">lets keep learning</a></li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <!-- And here is our main footer that is used across all the pages of our website -->
+
+  <footer>
+    <!-- this is the main footer that is used across most pages -->
+    <button> Change user</button>
+    <!-- this creates a button with the text change user -->
+    <p>©Copyright 1234 by example. All rights reserved</p>
+    <p>
+      <!--you can turn images into clickable links. -->
+      <a href="https://www.freecodecamp.org/" target="_blank"> <img src="images/reaperpie.jpg" alt="photo" width="100"> </a>
+      <!--turns an image into a clickable link-->
+    </p>
+  </footer>
   <script src="scripts/main.js"></script>
   <!-- this links to your javascipt file: similar to how we linked the css file above -->
-
 </body>
 
 </html>
