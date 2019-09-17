@@ -1,16 +1,16 @@
 /* this is a comment in css */
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
 html {
-  font-size: 15px;
- /* px means "pixels": the base font size is now 15 pixels high  */
-  font-family: 'Roboto Condensed', sans-serif;
- /* this indicates the type of font your web page */
-  background-color: #2C3531;
+  /* this indicates the type of font your web page */
+  background-color: #0F1626;
+  /* px means "pixels": the base font size is now 15 pixels high  */
+  font: 15px 'Roboto Condensed', sans-serif;
 }
 
 body {
@@ -19,61 +19,64 @@ body {
 }
 
 #main-header {
-   /* select a specified element is by using the ID selector ( # ) each ID should be *unique* */
+  /* select a specified element is by using the ID selector ( # ) each ID should be *unique* */
   margin: 0;
   padding: 20px 0;
-  font-size: 40px;
   text-align: center;
   color: #000000;
   text-shadow: 5px, 5px, 10px black;
- /* sets a drop shadow on text inside the element: horizontal, vetical, blur radius, base color of the shadow */
+  font-size: 40px;
+  /* sets a drop shadow on text inside the element: horizontal, vetical, blur radius, base color of the shadow */
 }
+
 /* || header layout */
 
-nav, article, aside, footer {
-  background-color: #116466;
+nav,
+article,
+aside {
   padding: 1%;
+  background-color: #AB987A;
 }
 
 nav {
-  height: 50px;
-  background-color: #D9B08C;
   display: flex;
+  height: 50px;
   margin-bottom: 10px;
+  background-color: #ff5330;
 }
 
 nav ul {
+  display: flex;
+  flex: 2;
   padding: 0;
   list-style-type: none;
-  flex: 2;
-  display: flex;
 }
 
 nav li {
   display: inline;
-  text-align: center;
   flex: 1;
+  text-align: center;
 }
 
 nav a {
   display: inline-block;
-  font-size: 2rem;
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
   color: black;
+  font-size: 2rem;
 }
 
 nav form {
-  flex: 1;
   display: flex;
   align-items: center;
+  flex: 1;
   height: 100%;
   padding: 0 2em;
 }
 
 input {
-  font-size: 1.6rem;
   height: 32px;
+  font-size: 1.6rem;
 }
 
 input[type="search"] {
@@ -83,9 +86,9 @@ input[type="search"] {
 input[type="submit"] {
   flex: 1;
   margin-left: 1rem;
-  background: #333;
-  border: 0;
   color: white;
+  border: 0;
+  background: #333;
 }
 
 /* || main layout */
@@ -101,7 +104,7 @@ article {
 aside {
   flex: 1;
   margin-left: 10px;
-  background-color: #ffCB9A;
+  background-color: #AB987A;
 }
 
 aside li {
@@ -110,39 +113,70 @@ aside li {
 
 footer {
   margin-top: 10px;
+  padding: 1%;
   text-align: center;
+  background-color: #3f3250;
 }
 
 h2 {
-  font-size: 25px;
   text-align: inherit;
- /* aligns text to center of the page */
+  font-size: 25px;
+  /* aligns text to center of the page */
 }
 
-p, li {
+p,
+li {
+  /* sets distance between lines of text */
+  letter-spacing: normal;
   font-size: 15px;
   line-height: normal;
- /* sets distance between lines of text */
-  letter-spacing: normal;
- /* changes letter spacing */
+  /* changes letter spacing */
 }
 
 p {
   color: #D1E3E2;
- /* change the colour of the element selected */
+  /* change the colour of the element selected */
 }
 
 body {
   width: 70%;
- /* specifies width of the element */
+  /* specifies width of the element */
   margin: 0 auto;
- /* space around the outside of the element: 1st value effects top/bottom, 2nd value effects left/right */
-  background-color: #D1E3E2;
-  /* to change the background of an element */
+  /* space around the outside of the element: 1st value effects top/bottom, 2nd value effects left/right */
   padding: 0 20px 20px 20px;
- /* area just around the content: top, right, bottom, left in that order */
+  /* area just around the content: top, right, bottom, left in that order */
   border: 5px solid black;
- /* solid line just outside the padding */
+  /* solid line just outside the padding */
+  background-color: rgb(17, 100, 102, 0.5);
+  /* to change the background of an element */
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: darkgrey;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
 }
 
 img {
@@ -150,13 +184,28 @@ img {
   margin: 0 auto;
 }
 
-/* this changes the color of links within a page
- a {
+/* this changes the color of links within a page */
+
+a:link {
+  text-decoration: none;
   color: #3800ff;
+  background-color: transparent;
 }
-a:visited {
+
+/* a:visited {
+  text-decoration: none;
   color: #ff00f7;
-}
-a:hover, a:active, a:focus {
-  color:#E0E017;
+  background-color: transparent;
 } */
+
+a:hover {
+  text-decoration: underline;
+  color: red;
+  background-color: transparent;
+}
+
+a:active {
+  text-decoration: underline;
+  color: yellow;
+  background-color: transparent;
+}

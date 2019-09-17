@@ -1,117 +1,176 @@
 <!-- this is a comment in html -->
-
 <!DOCTYPE html>
-<html>
-<html lang="en" dir="ltr">
+<!-- above defines this document to be HTML5 -->
+<html dir="ltr" lang="en">
 
 <head>
   <meta charset="utf-8">
+  <title>My page title</title><!-- this is the title of a page (name you see in internet tabs) -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet"
+    type="text/css"><!-- this is a google font link -->
+  <link href="styles/styles.css" rel="stylesheet" type="text/css"><!-- above links an external css stylesheet -->
+  <script src="https://kit.fontawesome.com/53c53ad96e.js"></script>
 
-  <title>My page title</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="styles/styles.css">
-  <!-- above links an external css stylesheet -->
   <style media="screen">
     /* embedded css goes here */
   </style>
 </head>
 
-<body>
+<body id="home">
   <!-- Here is our main header that is used across website -->
-
   <header>
-    <h1 id="main-header">My main header</h1>
-  </header>
-
-  <!-- below creates a nav bar with clickable links to differnet pages -->
+    <h1 id="main-header">My main header</h1><!-- this is always your main header -->
+  </header><!-- below creates a nav bar with clickable links to different pages -->
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Team</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-
-    <!-- A Search form is another commmon way to navigate through websites -->
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#">Projects</a>
+      </li>
+      <li>
+        <a href="#">Team</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul><!-- A Search form is another common way to navigate through websites -->
     <form>
-      <input type="search" name="#" placeholder="Search query">
+      <label><input name="#" placeholder="Search query" required="" type="search"></label>
+      <!-- this is what we are using as our search bar -->
       <input type="submit" value="Go!">
     </form>
-  </nav>
-
-  <!-- Here is our page's main content -->
+  </nav><!-- Here is the page's main content -->
   <main>
-
     <!-- It contains an article -->
     <article>
-      <h2>My top level heading</h2>
+      <h2>My <sub>top</sub> level <sup>heading</sup></h2><!-- this shows the text as being subscript -->
+      <!-- this shows the text as superscript -->
       <p>Below is an <strong>Ordered list</strong>, they are <u>usually numbered</u></p>
-      <!-- strong places strong emphasis/importance  -->
+      <!-- (strong) places strong emphasis/importance  -->
       <!-- 'u' used to convey a meaning traditionally conveyed by underline: Proper name, misspelling, links -->
       <ol>
         <li>1</li>
         <li>2</li>
         <li>3</li>
       </ol>
-
+      <hr>
       <h3>My subheading</h3>
       <p>Below is an <em>Unordered list</em>, they are great for <b>listing information</b></p>
-      <!-- emphasis shows stress on certain words -->
+      <!-- emphasis (em) shows stress on certain words -->
       <!-- 'b' is used to convey a meaning traditionally conveyed by bold: Key words, product names, lead sentence -->
-
       <ul>
         <li>A</li>
         <li>B</li>
         <li>C</li>
       </ul>
-
+      <dl>
+        <dt>example</dt>
+        <dd>descriptive list</dd>
+      </dl>
+      <hr>
+      <p>This is a table</p>
+      <table>
+        <caption>
+          Example caption
+        </caption>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+        </tr>
+        <tr>
+          <td>D</td>
+          <td>E</td>
+          <td>F</td>
+        </tr>
+        <tr>
+          <td>G</td>
+          <td>H</td>
+          <td>I</td>
+        </tr>
+      </table>
+      <hr>
+      <!-- an hr is called a horizontal rule- it makes a horizontal line on the page -->
       <h4>My sub-subheading</h4>
-
-      <p>This is how we mark up a <i>Paragraph</i></p>
+      <p>This is a typical <i>Paragraph</i> within an HTML <small>web</small>page!<br>
+        <bdo dir="rtl">This text will be written from right to left</bdo>
+        <!-- above is bi-directional override, it writes text from right to left(backwards) -->
+      </p><!-- small defines the text to be shown as small -->
       <!-- 'i' used to convey a meaning traditionally conveyed by italic: Foreign words, taxonomic designation, technical terms, a thought -->
-      <a href="mailto:example@gmail.com">Send an email to example</a>
-      <p>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozilla Developer Network</a>
+      <a href="mailto:example@gmail.com">Send an email to example</a> <!-- an example email link to send mail -->
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozilla Developer Network</a>
         <!-- this imbeds a link within an element -->
         <!-- target="_blank" opens link in new tab -->
-      </p>
-      <p>
-        <a href="https://www.w3schools.com/html/" title="supplemental info about link" target="_blank">w3schools <abbr title="Hypertext Markup Language">HTML</abbr></a>
-        <!-- abbr abbreviates words that are wrapped within it -->
-      </p>
-
-    </article>
-
-    <!-- the aside content can also be nested within the main content -->
-    <aside>
+      </p><a href="https://www.w3schools.com/html/" target="_blank" title="supplemental info about link">w3schools
+        <abbr title="Hypertext Markup Language">HTML</abbr></a>
+      <!-- abbr abbreviates words that are wrapped within it -->
+      <hr>
+      <form action="index.html" class="#" method="post">
+        <label for="example 1"><input checked id="example1" name="example1" type="radio">example 1</label> <label
+          for="example 2"><input id="example2" name="example2" type="radio">example 2</label>
+        <!-- form above shows how to create radio buttons -->
+        <label for="checkbox"><input checked id="#" name="checkbox" type="checkbox"> box 1</label> <label
+          for="checkbox"><input id="#" name="checkbox" type="checkbox"> box 2</label>
+      </form>
+    </article><!-- the aside content can also be nested within the main content -->
+    <aside style="border: 5px solid orangered;">
+      <!-- the style above adds a 2px violet boarder around our aside element -->
       <h2>Related</h2>
-
       <ul>
-        <li><a href="#">This is the side bar</a></li>
-        <li><a href="#">usually used for quotes</a></li>
-        <li><a href="#">or media, sometimes impotant links</a></li>
-        <li><a href="#">it can be nested within the "main" element</a></li>
-        <li><a href="#">lets keep learning</a></li>
+        <li>
+          <a href="#"><mark>This is the side bar</mark></a>
+        </li><!-- mark is used to mark/highlight text on the page -->
+        <li>
+          <a href="#">usually used for quotes</a>
+        </li>
+        <li>
+          <a href="#">or media, sometimes important</a>
+        </li>
+        <li>
+          <a href="#">it can be nested within the "main" element</a>
+        </li>
+        <li>
+          <a href="#">these will later lead to other pages</a>
+        </li>
       </ul>
+      <address>
+        Written by John Doe.<br>
+        Visit us at:<br>
+        Example.com<br>
+        Box 123, Place<br>
+        USA
+      </address>
     </aside>
-
-  </main>
-
-  <!-- And here is our main footer that is used across all the pages of our website -->
-
+  </main><!-- And here is our main footer that is used across all the pages of our website -->
   <footer>
     <!-- this is the main footer that is used across most pages -->
-    <button> Change user</button>
-    <!-- this creates a button with the text change user -->
+    <button>Change user</button><!-- above creates a button with the text change user -->
+    
+
     <p>©Copyright 1234 by example. All rights reserved</p>
+    <!-- above is a typical Copyright example, usually always in the footer -->
     <p>
-      <!--you can turn images into clickable links. -->
-      <a href="https://www.freecodecamp.org/" target="_blank"> <img src="images/reaperpie.jpg" alt="photo" width="100"> </a>
+      <i class="fab fa-html5"></i>
+      <i class="fab fa-css3"></i>
+      <i class="fab fa-github-alt"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-facebook"></i>
+    </p>
+    <p>
+      <!-- <a href="https://www.freecodecamp.org/" target="_blank"> --><img alt="photo" src="images/reaperpie.jpg"
+          width="100"></a>
       <!--turns an image into a clickable link-->
     </p>
   </footer>
-  <script src="scripts/main.js"></script>
-  <!-- this links to your javascipt file: similar to how we linked the css file above -->
+  <script src="scripts/main.js">
+  </script> <!-- this links to your javascript file: similar to how we linked the css file above -->
 </body>
 
 </html>
